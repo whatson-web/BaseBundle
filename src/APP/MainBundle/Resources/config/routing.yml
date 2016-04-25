@@ -1,0 +1,3 @@
+app_main_integration:
+    path:     /integration/{page}
+    defaults: { _controller: APPMainBundle:Default:integration }

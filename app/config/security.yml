@@ -1,0 +1,75 @@
+security:
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        APP\UserBundle\Entity\User: sha512
+
+
+    role_hierarchy: #DU plus petit rôle ou plus général.
+        ROLE_USER:        []       # Rôle user ne peut rien faire
+        ROLE_ADMIN:       []       # Rôle Minimal pour accéder à l'admin
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH] # NB : ALLOWED TO SWITCH A LE DROIT DE PRENDRE L'IDENTITIE DE QQ
+
+
+    providers:
+        users:
+            id: fos_user.user_provider.username
+
+    #Ca c'est les règles du firewall
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+
+        admin:
+            pattern:   ^/admin
+            anonymous: ~
+            provider:  users
+            form_login:
+                login_path: wh_admin_login
+                check_path: wh_admin_security_check
+                default_target_path: /admin
+            logout:
+                path:   fos_user_security_logout
+                target: /
+            remember_me:
+                key: %secret% # %secret% est un paramètre de parameters.yml
+
+
+        membre:
+            pattern:   ^/ #Toutes la base est accessible par les users anonyme
+            anonymous: ~
+            provider:  users # On change cette valeur
+
+            form_login:
+                login_path: whme_login
+                check_path: whme_security_check
+                default_target_path: /membre
+                use_referer: false
+            logout:
+                path:   fos_user_security_logout
+                target: /
+            remember_me:
+                key: %secret% # %secret% est un paramètre de parameters.yml
+
+
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+
+
+        oauth_authorize:
+            pattern:    ^/oauth/v2/auth
+            form_login:
+                provider: users
+                check_path: whme_security_check
+                login_path: whme_login
+            anonymous: true
+
+
+    #Et la on donne les droits suivant les urls, mais on peut aussi le faire en annotations dans les controller
+    access_control:
+        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/membre, role: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_ADMIN } #Tout ce qui est pre-fixé par admin est accessible qu'au ROLE_ADMIN

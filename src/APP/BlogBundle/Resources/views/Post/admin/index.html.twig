@@ -1,0 +1,88 @@
+{% extends "APPBlogBundle:Post/admin:main.html.twig" %}
+
+{% block meta_title %} {{ parent() }} - Actualités {% endblock %}
+
+{% block ariane %}
+
+    {{ parent() }}
+    <li><a href="{{ path('appad_blog_post') }}">Actualités</a></li>
+
+{% endblock %}
+
+{% block title_right %}
+
+    <div class="btn-group pull-right">
+        <a href="{{ path('appad_blog_post_create') }}" class="btn btn-success" {{ Smart.modal() }}><i
+                    class="fa fa-plus"></i> Créer une nouvelle actualité</a>
+    </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="well">
+
+            <h1>Gestion des actualités</h1>
+
+            <table class="display projects-table table table-striped table-bordered table-hover" cellspacing="0"
+                   width="100%">
+
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Nom</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for post in posts %}
+                    <tr class="{% if post.status == "draft" %}danger{% endif %}">
+                        <td>
+                            <a href="{{ path('appad_blog_post_update', { 'post': post.id }) }}"
+                               class="btn btn-xs btn-primary"><i class="fa fa-edit"></i></a>
+                            <a href="{{ path('appad_blog_post_delete', { 'post': post.id }) }}"
+                               class="btn btn-xs btn-danger" {{ Smart.confirm('Etes-vous sûr de vouloir supprimer cette actualité ? ') }}><i
+                                        class="fa fa-trash-o"></i></a>
+                        </td>
+                        <td>
+                            <a href="{{ path('app_blog_post', {'slug' : post.slug}) }}"
+                               target="_blank">{{ post.name }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+
+    {{ parent() }}
+
+    <script type="application/javascript">
+
+        var popupSuccess = function (data) {
+
+            if ($.isPlainObject(data)) {
+
+                window.location = data.redirect;
+
+            } else {
+
+                $('#modal .modal-content').html(data);
+
+            }
+
+        }
+
+    </script>
+
+{% endblock %}

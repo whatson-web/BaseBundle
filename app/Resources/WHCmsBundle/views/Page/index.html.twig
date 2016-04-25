@@ -1,0 +1,58 @@
+{% extends "WHMainBundle::layout.html.twig" %}
+
+{% block banner %}
+
+    {% if Page.banner is not empty %}
+
+        <div class="banniere">
+            <img src="{{ Page.banner.url }}" alt="{{ Page.banner.alt }}"/>
+        </div>
+
+    {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="contenu">
+
+            <h1>{{ Page.title }}</h1>
+
+            {{ Page.body | raw }}
+
+        </div>
+
+        {{ render(controller('APPCmsBundle:Page:sousPages', {'pageId' : Page.id})) }}
+
+        {{ render(controller('APPCmsBundle:Page:sousRubriques', {'pageId' : Page.id})) }}
+
+        {{ render(controller('APPCatalogueBundle:ProductFront:list', {'pageId' : Page.id})) }}
+
+        {{ render(controller('APPCmsBundle:Page:faq', {'pageId' : Page.id})) }}
+
+
+        {% if Page.banniereConfigurateur %}
+
+            <div class="banniere-configurateur">
+                <a href="#">
+                    <img src="{{ asset('front/img/tmp-configurateur.png') }}" alt=""/>
+                </a>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+    <div class="contenu-bas">
+
+        <div class="container">
+
+            {{ Page.body | raw }}
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+.configurateur {
+
+  form {
+    margin: 0;
+  }
+
+  .caracteristique {
+    margin: 0 0 20px 0;
+
+    .panel {
+      border: 1px solid #636363;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        line-height: 45px;
+        background: #636363;
+        color: #FFF;
+      }
+
+      > div {
+        padding: 10px;
+        padding-bottom: 0px;
+
+        ul {
+          margin: 0;
+          text-align: center;
+
+          > li {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px 10px 0;
+
+            > a {
+              display: block;
+              padding: 0 10px;
+              line-height: 35px;
+              background: #636363;
+              color: #FFF;
+            }
+
+          }
+
+        }
+
+        .btn-group {
+          display: block;
+          margin: 0;
+
+          > .btn {
+            display: block;
+            width: 100%;
+            padding: 0 10px;
+            border: none;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            background: #636363;
+            color: #FFF;
+            text-shadow: none;
+            @include border-radius(0px);
+            @include box-shadow(none);
+
+            .caret {
+              border-top: 12px solid #FFF;
+              border-right: 10px solid transparent;
+              border-left: 10px solid transparent;
+              margin: 14px 0 0 0;
+            }
+
+          }
+
+          .dropdown-menu {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            @include border-radius(0px);
+            @include box-shadow(none);
+
+            li {
+              display: block;
+              margin: 0;
+
+              a {
+                display: block;
+                padding: 0 10px;
+                font-size: 14px;
+                line-height: 30px;
+                color: #FFF;
+
+                &:hover {
+                  background: #B4D84E;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .choix {
+      padding: 10px;
+      background: #636363;
+
+      .row-fluid > .span7 > * {
+        color: #FFF;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 120%;
+      }
+
+    }
+
+  }
+
+  .combinaison {
+    padding: 20px 0;
+    background: #F4F4F4;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .ajout-panier {
+      text-align: center;
+
+      button {
+        display: inline-block;
+        vertical-align: top;
+        border: none;
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 40px;
+        text-transform: uppercase;
+        background: #cc4e29;
+        color: #FFF;
+        text-shadow: none;
+        @include border-radius(40px);
+      }
+
+    }
+
+  }
+
+}

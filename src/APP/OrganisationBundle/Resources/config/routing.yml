@@ -1,0 +1,3 @@
+app_organisation_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: APPOrganisationBundle:Default:index }
