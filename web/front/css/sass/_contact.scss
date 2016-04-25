@@ -1,0 +1,19 @@
+.submit {
+  text-align: right;
+
+  button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px;
+    border: none;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #b4d84e;
+    color: #FFF;
+    text-shadow: none;
+    @include border-radius(14px);
+  }
+
+}

@@ -1,0 +1,349 @@
+.fiche {
+    background: #F7F7F7;
+    padding: 30px 15px;
+}
+
+.fiche h1.jardin {
+    text-align: center;
+    color: #97bf0d;
+}
+
+.fiche h1.toiture {
+    text-align: center;
+    color: #cc4e29;
+}
+
+table.caracteristiques {
+    width: 100%;
+}
+
+table.caracteristiques tr td:first-child {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #636363;
+}
+
+table.caracteristiques tr td + td {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #636363;
+}
+
+table.caracteristiques tr td h3 {
+    margin: 0;
+}
+
+.barre_nav {
+    position: relative;
+    height: 30px;
+}
+
+.barre_nav a {
+    position: absolute;
+    top: 0px;
+    display: block;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 12px;
+    line-height: 30px;
+    color: #00b3d0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.barre_nav a.prev {
+    left: 0px;
+}
+
+.barre_nav a.next {
+    right: 0px;
+}
+
+.barre_nav a.prev:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 11px 15px 11px 0;
+    border-color: transparent #00b4d0 transparent transparent;
+    margin: 0 10px 0 0;
+}
+
+.barre_nav a.next:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 11px 0 11px 15px;
+    border-color: transparent transparent transparent #00b4d0;
+    margin: 0 0 0 10px;
+}
+
+.livraison_offerte {
+    background: #93117e;
+    padding: 10px;
+}
+
+.livraison_offerte p {
+    font-size: 12px;
+    line-height: 110%;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.livraison_offerte p.ligne_un {
+    font-size: 22px;
+}
+
+#PanierViewForm {
+    margin: 15px 0;
+}
+
+#PanierViewForm .controls {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#PanierViewForm .controls input {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #bababa;
+    text-align: center;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#PanierViewForm button {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 0 20px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    background: #b4d84e;
+    text-shadow: none;
+    float: right;
+}
+
+.fiche_technique {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #FFF;
+    background: #1a171b;
+    padding: 0 15px;
+    text-transform: uppercase;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+}
+
+.fiche_technique:hover {
+    color: #FFF;
+}
+
+#centre .tel {
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+#centre .tel img {
+    margin: 0 0 10px 0;
+}
+
+#centre .tel p {
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+
+#commande_express {
+    border-top: 4px solid #93117e;
+    border-bottom: 4px solid #93117e;
+}
+
+#commande_express .alert h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+#commande_express .alert p {
+    margin: 0;
+}
+
+#commande_express .error_text {
+    display: block;
+    font-size: 10px;
+    color: #b94a48;
+}
+
+#commande_express form {
+    margin: 0 0 15px 0;
+}
+
+#commande_express h2 {
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 700;
+    color: #93117e;
+    padding: 5px 40px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #93117e;
+}
+
+#commande_express label {
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 5px 0;
+    color: #000;
+}
+
+#commande_express input,
+#commande_express select {
+    padding: 0 5px;
+    margin: 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+    height: 26px;
+    min-height: 26px;
+}
+
+#commande_express .submit {
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+
+#commande_express .submit .btn {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 800;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 0 30px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    background: #b4d84e;
+    text-shadow: none;
+}
+
+nav#menuPage > .container > ul.nav > li.active > ul.nav > li > a {
+    font-size: 16px;
+}
+
+nav#menuPage > .container > ul.nav > li.active > ul.nav > li.menuitem_28 > a {
+    width: 110px;
+}
+
+nav#menuPage > .container > ul.nav > li.active > ul.nav > li.jardin > a {
+    color: #7eb907;
+}
+
+nav#menuPage > .container > ul.nav > li.active > ul.nav > li.toiture > a {
+    color: #cc4e29;
+}
+
+#DeclinaisonViewForm select {
+    width: 100%;
+    margin: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #636363;
+    height: 20px;
+    padding: 0;
+}
+
+.puces {
+    position: relative;
+    padding: 0 25px;
+    margin: 10px 0;
+}
+
+.puces > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.puces .precedent {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7.5px 15px 7.5px 0;
+    border-color: transparent #98bf0d transparent transparent;
+}
+
+.puces .suivant {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7.5px 0 7.5px 15px;
+    border-color: transparent transparent transparent #98bf0d;
+}
+
+.puces .conteneur {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#myCarousel .carousel-inner .item img {
+    width: 100%;
+}
+
+#myCarousel .carousel-indicators {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10000px;
+}
+
+#myCarousel .carousel-indicators li {
+    display: inline-block;
+    vertical-align: top;
+    width: 85px;
+    height: auto;
+    margin: 0 10px 0 0;
+    float: none;
+    text-indent: 0px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    section.accessoires .row-fluid > div .ajouter {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0;
+        font-size: 12px;
+    }
+}

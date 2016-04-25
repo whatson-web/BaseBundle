@@ -1,0 +1,161 @@
+{% extends "WHMainBundle::layout.html.twig" %}
+
+{% block content %}
+
+    <div class="banner">
+        <div class="container">
+            <img src="{{ asset('front/img/banniere.jpg') }}" alt="Bannière" class="img-responsive"/>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Nos offres</h1>
+
+    </div>
+
+    <div class="liste-offres-centrale">
+
+        <div class="offre">
+
+            <div class="container">
+
+                <div class="cuisinella">
+
+                    <div>
+                        <img src="{{ asset('front/img/offre-cuisinella.jpg') }}" alt="Offre cuisinella"
+                             class="img-responsive"/>
+                    </div>
+
+                    <div>
+
+                        <div>
+
+                            <div>
+
+                                <span class="cheque">Chèque cadeau 5000€ <span>(4)</span></span><br><span>pour l'achat de votre cuisine</span>
+
+                                <div class="logo">
+                                    <img src="{{ asset('front/img/offre-cuisinella-logo.png') }}" alt="Logo cuisinella"
+                                         class="img-responsive"/>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="offre">
+
+            <div class="container">
+
+                <div class="abi">
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+
+                            <div class="logo">
+                                <img src="{{ asset('front/img/offre-abi-logo.png') }}" alt="Logo ABI"
+                                     class="img-responsive"/>
+                            </div>
+
+                            <p><strong>ABI GESTION LOCATIVE</strong> Service de gestion locative de Nacarat</p>
+
+                        </div>
+
+                        <div class="col-md-8">
+
+                            <div class="row">
+
+                                <div class="col-sm-6">
+
+                                    <div class="pastille">
+                                        <img src="{{ asset('front/img/pastille-frais-offerts.png') }}"
+                                             alt="Frais de négociations offerts" class="img-responsive"/>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-6">
+
+                                    <div class="pastille">
+                                        <img src="{{ asset('front/img/pastille-gestion-offerts.png') }}"
+                                             alt="3 mois de gestion  offerts" class="img-responsive"/>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="offre">
+
+            <div class="container">
+
+                <div class="ipad">
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <img src="{{ asset('front/img/pastille-ipad.png') }}" alt="Ipad" class="img-responsive"/>
+                        </div>
+
+                        <div class="col-md-9">
+
+                            <img src="{{ asset('front/img/pastille-ipad-title.png') }}" alt="Jeu concours Ipad"
+                                 class="img-responsive"/>
+
+                            <p>Participation dans nos logements témoins décorés du 23 avril au 30 avril 2016.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+
+    <script type="text/javascript">
+
+        var fixeHauteurOffreCuisinella = function () {
+
+            $('.liste-offres-centrale .offre .cuisinella > div').css('line-height', $('.liste-offres-centrale .offre .cuisinella > div > img').height() + 'px');
+
+        };
+
+        $(window).load(function () {
+            fixeHauteurOffreCuisinella();
+        });
+
+        $(window).resize(function () {
+            fixeHauteurOffreCuisinella();
+        });
+
+    </script>
+
+{% endblock %}

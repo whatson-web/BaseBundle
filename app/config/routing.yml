@@ -1,0 +1,69 @@
+app_main:
+    resource: "@APPMainBundle/Resources/config/routing.yml"
+
+appad_blog:
+    resource: "@APPBlogBundle/Resources/config/routing-admin.yml"
+    prefix: /admin/blog
+
+app_blog:
+    resource: "@APPBlogBundle/Resources/config/routing.yml"
+
+wh_parameter:
+    resource: "@WHMainBundle/Controller"
+    type:     annotation
+
+wh_user:
+    resource: "@WHUserBundle/Controller"
+    type:     annotation
+
+wh_blog:
+    resource: "@WHBlogBundle/Controller"
+    type:     annotation
+
+wh_admin_security_check:
+    path:     /admin/login_check
+    defaults: { _controller: FOSUserBundle:Security:check }
+
+#FOSUSER BUNDLE
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /admin/profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+
+#MEDIAS
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"
+     prefix: /admin
+
+genemu_image:
+    resource: "@GenemuFormBundle/Resources/config/routing/image.xml"
+
+genemu_upload:
+    resource: "@GenemuFormBundle/Resources/config/routing/upload.xml"
+
+app_main_controller:
+    resource: "@APPMainBundle/Controller"
+    type:     annotation
+
+wh_cms:
+    resource: "@WHCmsBundle/Controller"
+    type:     annotation
+

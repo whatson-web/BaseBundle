@@ -1,0 +1,3 @@
+admin_security_check:
+    path:     /admin/login_check
+    defaults: { _controller: FOSUserBundle:Security:check }
