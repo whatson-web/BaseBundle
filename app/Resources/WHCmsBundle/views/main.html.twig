@@ -1,41 +1,9 @@
 {% extends "WHMainBundle::layout.html.twig" %}
 
-{% block content %}
+{% block body %}
 
-    <div class="page">
-
-        <div class="container">
-
-            {% block breadcrumb %}{% endblock %}
-
-            {% block h1 %}{% endblock %}
-
-            <div class="row">
-
-                <div class="col-md-9">
-
-                    <div class="centrale">
-
-                        {% block body %}{% endblock %}
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="colonne">
-                        {% block colonne %}{% endblock %}
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        {% block reparation %}{% endblock %}
-
+    <div id="main">
+        {% block main %}{% endblock %}
     </div>
 
 {% endblock %}
