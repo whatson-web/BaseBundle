@@ -54,6 +54,22 @@ var equilibreLineHeight = function (selecteur) {
 }
 
 
+var writeDataHeight = function (selecteur) {
+
+    $(selecteur).each(function () {
+
+        var originalHeight = $(this).css('height');
+
+        $(this).css('height', 'auto');
+        $(this).attr('data-height', $(this).height());
+
+        $(this).css('height', originalHeight);
+
+    });
+
+};
+
+
 $('a[data-anchor]').click(function () {
 
     $('html,body').animate({scrollTop: $('#' + $(this).data('anchor')).offset().top}, 'slow');
