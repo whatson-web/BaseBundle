@@ -1,0 +1,63 @@
+/* RESET BOOSTRAP 3 */
+
+body {
+  font-size: 12px;
+  line-height: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+ul,
+p {
+  margin: 0px;
+}
+
+
+/*
+padding container à 0 pour largeur à 1170px
+*/
+
+.container {
+  position: relative;
+  padding: 0;
+}
+
+.navbar {
+  min-height: 0px;
+  margin: 0;
+  border: none;
+  background: none;
+
+  .container-fluid {
+    padding: 0px;
+
+    .navbar-collapse {
+      padding: 0px;
+
+      .navbar-nav {
+        float: none;
+
+        > li {
+          float: none;
+          display: inline-block;
+          vertical-align: top;
+
+          > a {
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+            background: none;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
