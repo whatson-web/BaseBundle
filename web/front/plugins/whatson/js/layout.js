@@ -1,7 +1,6 @@
-var fixePaddingBody = function() {
-
+var fixePaddingBody = function () {
     $('body').css('padding-top', $('header').height() + 'px');
-}
+};
 
 var equilibre = function (selecteur) {
 
@@ -26,13 +25,11 @@ var equilibre = function (selecteur) {
         $(this).css('min-height', hauteurMinimum + 'px');
     });
 
-}
-
+};
 
 var equilibreLineHeight = function (selecteur) {
 
     var hauteurMinimum = 0;
-
 
     $(selecteur).each(function () {
 
@@ -44,15 +41,13 @@ var equilibreLineHeight = function (selecteur) {
 
     });
 
-
     $(selecteur).each(function () {
 
         $(this).css('line-height', hauteurMinimum + 'px');
 
     });
 
-}
-
+};
 
 var writeDataHeight = function (selecteur) {
 
@@ -69,27 +64,9 @@ var writeDataHeight = function (selecteur) {
 
 };
 
-
 $('a[data-anchor]').click(function () {
 
     $('html,body').animate({scrollTop: $('#' + $(this).data('anchor')).offset().top}, 'slow');
 
     return false;
-});
-
-
-
-$(window).ready(function () {
-    fixePaddingBody();
-
-});
-
-$(window).load(function () {
-    fixePaddingBody();
-
-});
-
-$(window).resize(function () {
-    fixePaddingBody();
-
 });

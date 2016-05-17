@@ -1,5 +1,4 @@
-
-css_dir = "" # by Compass.app 
+css_dir = "" # by Compass.app
 sass_dir = "sass" # by Compass.app 
 images_dir = "images" # by Compass.app 
 output_style = :compressed # by Compass.app 
