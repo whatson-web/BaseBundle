@@ -12,6 +12,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class IntegrationController extends Controller
 {
 
+    private $categories = array(
+        array(
+            'name'  => 'Pages classiques',
+            'pages' => array(
+                'classicExample',
+                'exampleWithController',
+            ),
+        ),
+    );
+
     /**
      * @var array
      */
@@ -26,6 +36,28 @@ class IntegrationController extends Controller
             'controller' => 'APPMainBundle:Integration:exampleWithController',
         ),
     );
+
+    /**
+     * Retourne les catégories avec les informations des pages
+     *
+     * @return mixed
+     */
+    private function getCategories()
+    {
+
+        $categories = $this->categories;
+
+        foreach ($categories as &$category) {
+
+
+            foreach ($category['pages'] as &$page) {
+
+                $page = $this->pages[$page];
+            }
+        }
+
+        return $categories;
+    }
 
     /**
      * Liste toutes les pages d'intégration
@@ -60,7 +92,8 @@ class IntegrationController extends Controller
         return $this->render(
             'APPMainBundle:Integration:list.html.twig',
             array(
-                'pages' => $this->pages,
+                'pages'      => $this->pages,
+                'categories' => $this->getCategories(),
             )
         );
     }
