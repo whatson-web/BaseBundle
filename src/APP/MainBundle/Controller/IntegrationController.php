@@ -87,7 +87,7 @@ class IntegrationController extends Controller
 
 
         return $this->render(
-            'APPMainBundle:Integration:' . $page['view'] . '.html.twig',
+            $page['view'],
             array(
                 'form' => $form->createView(),
             )
