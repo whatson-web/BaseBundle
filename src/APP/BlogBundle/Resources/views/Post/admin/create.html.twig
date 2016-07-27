@@ -1,0 +1,37 @@
+{% extends "WHSmartAdminBundle::popup.html.twig" %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block title %} Créer une actualité {% endblock %}
+
+{% block body %}
+
+    {{ form_start(form, {'action': path('appad_blog_post_create'), 'method': 'POST'}) }}
+
+    <div class="padded">
+
+        {{ form_row(form.name) }}
+
+    </div>
+
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">
+            Annuler
+        </button>
+
+        {{ form_widget(form.editer) }}
+        {{ form_widget(form.new) }}
+
+    </div>
+
+    {{ form_end(form) }}
+
+    <script>
+
+        var form = $(".modal form");
+        $('.modal .select2').select2();
+
+    </script>
+
+{% endblock %}

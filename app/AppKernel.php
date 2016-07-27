@@ -55,6 +55,7 @@ class AppKernel extends Kernel
 
             new APP\UserBundle\APPUserBundle(),
             new APP\BackendBundle\APPBackendBundle(),
+            new APP\BlogBundle\APPBlogBundle(),
             new APP\CmsBundle\APPCmsBundle(),
             new APP\OrganisationBundle\APPOrganisationBundle(),
             new APP\MainBundle\APPMainBundle(),

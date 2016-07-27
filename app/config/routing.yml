@@ -1,6 +1,13 @@
 app_main:
     resource: "@APPMainBundle/Resources/config/routing.yml"
 
+appad_blog:
+    resource: "@APPBlogBundle/Resources/config/routing-admin.yml"
+    prefix: /admin/blog
+
+app_blog:
+    resource: "@APPBlogBundle/Resources/config/routing.yml"
+
 wh_parameter:
     resource: "@WHMainBundle/Controller"
     type:     annotation
