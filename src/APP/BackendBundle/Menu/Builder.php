@@ -38,8 +38,8 @@ class Builder extends Controller
             'extras' => array('safe_label' => true)
         ));
 
-        $menu['CMS']->addChild('wh_admin_blog_posts', array(
-            'route'  => 'wh_admin_blog_posts',
+        $menu['CMS']->addChild('appad_blog_post', array(
+            'route'  => 'appad_blog_post',
             'label'  => '<i class="fa fa-files-o"></i>  <span class="menu-item-parent">Actualités</span>',
             'extras' => array('safe_label' => true)
         ));
